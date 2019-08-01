@@ -86,6 +86,8 @@ botornot.factor <- function(x, fast = FALSE) {
 }
 botornot.character <- function(x, fast = FALSE) {
 x <- x[!is.na(x) & !duplicated(x)]
+botornot.character <- function(x, fast = FALSE) {
+x <- x[!is.na(x) & !duplicated(x)]
 if (fast)
 {
 x <- rtweet::lookup_users(x)
